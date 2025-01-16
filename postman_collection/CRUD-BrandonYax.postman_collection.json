@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "335b7f36-2639-4b81-bdbf-68c18c56eb98",
+		"name": "CRUD-BrandonYax",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15517319",
+		"_collection_link": "https://moonby.postman.co/workspace/Pruebas~1c2b25e7-b7a5-4eba-ae1e-0b451032066a/collection/15517319-335b7f36-2639-4b81-bdbf-68c18c56eb98?action=share&source=collection_link&creator=15517319"
+	},
+	"item": [
+		{
+			"name": "agregarCilindro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"serie\": \"ABC123\",\r\n  \"idenvase\": 1,\r\n  \"idproducto\": 2,\r\n  \"capacidad\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5046/api/cilindro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5046",
+					"path": [
+						"api",
+						"cilindro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editarCilindro",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"serie\": \"ABC1232\",\r\n  \"idenvase\": 1,\r\n  \"idproducto\": 1,\r\n  \"capacidad\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5046/api/cilindro/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5046",
+					"path": [
+						"api",
+						"cilindro",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarCilindro",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5046/api/cilindro/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5046",
+					"path": [
+						"api",
+						"cilindro",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allcilindros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"serie\": \"ABC123\",\r\n  \"idenvase\": 1,\r\n  \"idproducto\": 2,\r\n  \"capacidad\": 50.75\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5046/api/cilindro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5046",
+					"path": [
+						"api",
+						"cilindro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allenvases",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"serie\": \"ABC123\",\r\n  \"idenvase\": 1,\r\n  \"idproducto\": 2,\r\n  \"capacidad\": 50.75\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5046/api/envase",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5046",
+					"path": [
+						"api",
+						"envase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allproductos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"serie\": \"ABC123\",\r\n  \"idenvase\": 1,\r\n  \"idproducto\": 2,\r\n  \"capacidad\": 50.75\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5046/api/cilindro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5046",
+					"path": [
+						"api",
+						"cilindro"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

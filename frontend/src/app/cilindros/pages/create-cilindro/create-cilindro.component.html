@@ -1,0 +1,41 @@
+<div class="flex justify-content-center">
+  <form class="example-form" [formGroup]="cilindroForm" (ngSubmit)="onSubmit()"
+  style="max-width: 600px; padding: 16px; border-radius: 8px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+    <div class="p-d-flex p-flex-column">
+      <mat-form-field class="p-mb-3" style="width: 100%;">
+        <mat-label>Serie</mat-label>
+        <input matInput type="text" required formControlName="serie" />
+      </mat-form-field>
+
+      <mat-form-field class="p-mb-3" style="width: 100%;">
+        <mat-label>Tipo de Envase</mat-label>
+        <mat-select required formControlName="idenvase">
+          <mat-option *ngFor="let envase of envases" [value]="envase.id">
+            {{ envase.descripcion }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="p-mb-3" style="width: 100%;">
+        <mat-label>Producto</mat-label>
+        <mat-select required formControlName="idproducto">
+          <mat-option *ngFor="let producto of productos" [value]="producto.id">
+            {{ producto.descripcion }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="p-mb-3" style="width: 100%;">
+        <mat-label>Capacidad</mat-label>
+        <input matInput type="number" required formControlName="capacidad" />
+      </mat-form-field>
+    </div>
+    <div class="flex justify-content-end">
+      <button mat-flat-button color="primary" type="submit">
+        <mat-icon>save</mat-icon>
+        Guardar
+      </button>
+    </div>
+
+  </form>
+</div>

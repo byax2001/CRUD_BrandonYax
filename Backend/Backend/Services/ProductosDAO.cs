@@ -7,7 +7,7 @@ namespace Backend.Services
     {
         public CilindrosPContext context = new CilindrosPContext();
 
-        public List<Producto> allProducts()
+        public List<Producto> allProductos()
         {
             var productos = context.Productos.ToList<Producto>();
             return productos;

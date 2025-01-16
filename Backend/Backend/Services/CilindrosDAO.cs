@@ -7,10 +7,20 @@ namespace Backend.Services
     {
         public CilindrosPContext context = new CilindrosPContext();
         //todos los cilindros
-        public List<Cilindro> allCilindros()
+        public List<CilindroResp> allCilindros()
         {
-            var cilindros = context.Cilindros.ToList<Cilindro>();
-            return cilindros;
+            var cilindros = from c in context.Cilindros
+                            join e in context.Envases on c.Idenvase equals e.Id
+                            join p in context.Productos on c.Idproducto equals p.Id
+                            select new CilindroResp
+                            {
+                                Id = c.Id,
+                                Serie = c.Serie,
+                                Envase = e.Descripcion,
+                                Producto = p.Descripcion,
+                                Capacidad = c.Capacidad
+                            };
+            return cilindros.ToList<CilindroResp>();
         }
 
         //Insertar Cilindro

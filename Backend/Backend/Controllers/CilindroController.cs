@@ -12,7 +12,7 @@ namespace Backend.Controllers
         CilindrosDAO cilindrosDAO = new CilindrosDAO();
 
         [HttpGet("cilindro")]
-        public List<Cilindro> allCilindros() {
+        public List<CilindroResp> allCilindros() {
             return cilindrosDAO.allCilindros();
         }
 
